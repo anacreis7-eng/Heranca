@@ -4,13 +4,25 @@
     {
         static void Main(string[] args)
         {
-            Cachorro meuCachorro = new Cachorro("Jade", "Vira-Lata");
-            Gato meuGato = new Gato("Mingau", "Vira-Lata");
+            Funcionario Fu = new Funcionario("João Ricardo");
 
-            meuCachorro.Comer();
-            meuCachorro.Latir();
-            meuGato.Comer();
-            meuGato.Miar();
-;        }
+            Funcionario Ge = new Gerente("Patricia", 0);
+
+            Funcionario De = new Desenvolvedor("Cesar", 0);
+
+
+            Fu.Salario = 3500;
+
+            Ge.Salario = 50000;
+
+            De.Salario = 5500;
+
+
+            Console.WriteLine(Fu.CalcularBonusAnual());
+
+            Console.WriteLine(Ge.CalcularBonusAnual());
+
+            Console.WriteLine(De.CalcularBonusAnual());
+        }
     }
 }
